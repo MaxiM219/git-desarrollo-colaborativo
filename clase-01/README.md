@@ -2,28 +2,53 @@
 
 ## Verificar que se haya instalado GIT
 
-```
+```sh
 git --version
+```  
+
+## Configurando GIT por primera y única vez
+
+```sh
+git config --global user.name <nombre-del-usuario>
+git config --global user.name "Ave Fenix Dev"
+git config --global user.email <correo-electronico-github>
+git config --global user.email "avefenixdev@gmail.com"
+git config --global user.mail "avefenixdev@gmail.com"
 ```
 
-## Ver estado y área en la que están mis archivos
+## Controlar que la configuración exista y saber cuál es
 
+```sh
+git config --global --get-regexp <regex-expression>
+git config --global --get-regexp user
+git config --global --list
 ```
+
+## Borrar configuraciones
+
+```sh
+git config --global --unset <nombre-configuración>
+git config --global --unset user.mail
+```
+
+## Ver estado del archivos y área en la que están mis archivos
+
+```sh
 git status
 ```
 
-## Los archivos pueden estar en varios estados dentro del proyecto
+## Los archivos pueden estar en varios estado dentro del proyecto
 
 * untracked -> El archivo existe, git sabe que existe pero no le está dando seguimiento.
-* modified -> Los cambios dentro del archivo difieren de los cambios del archivo en el repositorio local
-* staged -> Los cambios dentro del archivo están confirmados para ser un commit
+* modified -> Los cambios dentro del archivo difieren de los cambios del archivo en local repo.
+* staged -> Los cambios dentro del archivo están confirmados para ser un commit.
 
 ## Ver historial de commits (Historia del repositorio)
 
 ```sh
 git log # larga
-git log --oneline #corta
-```
+git log --oneline # corta
+``` 
 
 ## Comparar estado de los archivos. Entre WD y LR
 
@@ -37,16 +62,16 @@ git diff
 git diff --staged # Que depende donde están las modificaciones es la referencia
 ```
 
-## Para sacar de la zona SA
+## Para sacar de la zona de SA
 
 ```sh
 git restore --staged <nombre-archivo>
 git restore --staged clase-01/_ref/areas.excalidraw # saco un archivo
-git restore --staged . #  saco todos los archivos
+git restore --staged . # saco todos los archivos
 git restore --staged clase-01/* # saco los archivos del directorio
 ```
 
-## Recuperar versiones anteriores de archivos que están dentro del repositorio local
+## Recupero versiones anteriores de archivos que están dentro del repositorio local
 
 ```sh
 git restore . # recupero todos los archivos a la última versión que está dentro del repo
@@ -54,4 +79,19 @@ git restore clase-01/_ref/areas.excalidraw
 ```
 
 ## .gitignore (Me permite descartar archivos -> ignorarlos)
-Son archivos que no quiero que formen parte del repositorio. Se crea manualmente dentro del directorio raíz del proyecto
+Son archivos que no quiero que formen parte del repositorio. Se crea manualmente dentro del directorio raíz del proyecto.
+
+## Para recuperar archivos del pasado y traerlos al presente
+
+```sh
+git restore --source=<hash> <nombre-archivo>
+git restore --source=3549e clase-01/README.md # versión antigua del archivo
+git restore --source=3549e . # todos los archivos en la versión de ese commit
+```
+
+## Como puedo saber que cambios hay dentro de un commit
+
+```sh
+git show <hash>
+git show 6fe6
+```
