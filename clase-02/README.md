@@ -78,3 +78,28 @@ git push -u <alias-remoto> <rama-local>
 git push -u origin main # indica a git que automaticamente la proxima vez que haga push se haga a la rama main remota.
 git push # segunda y siguientes veces y automaticamente se sube la rama local main a la rama remota main
 ```
+
+## Traernos los cambios del remoto
+
+### Git Pull
+Nos trae la meta data que se encuentra en la carpeta .git. No trae los cambios, solo la meta data.
+Actualiza la carpeta .git
+
+```sh
+git fetch
+```
+
+### Git Pull 
+Traer la metadata y cambios
+
+```sh
+git fetch
+```
+
+## Ver ramas locales y remotas
+Veo las ramas, su estado y en que commit quedaron esas ramas
+
+```sh
+git branch -r
+```
+
