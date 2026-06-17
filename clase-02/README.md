@@ -47,3 +47,8 @@ git switch -c feature/branches
 git diff feature/branches # Estando en main
 git diff main # Estando en feature/branches
 ```
+
+# Herramientas visulaes para trabajar con GIT
+
+* Github Desktop -> 
+* gitkraken -> 
