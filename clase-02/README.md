@@ -48,6 +48,14 @@ git diff feature/branches # Estando en main
 git diff main # Estando en feature/branches
 ```
 
+# Fusiones entre ramas
+
+## 3 formas que git va a realizar la fusión
+
+* Fast-forward -> Git resuelve por nosotros todo. Lo hace automaticamente
+* Triple via -> Git resuelve por nosotros todo. Lo hace automaticamente.
+* Conflicto -> Git no puede saber que cambios son los que quiero dejar y entra en conflicto. Manualmente. El desarrollo o desarrollodores tienen que ayudar a git a resolver el conflicto.
+
 # Herramientas visulaes para trabajar con GIT
 
 * Github Desktop -> 
