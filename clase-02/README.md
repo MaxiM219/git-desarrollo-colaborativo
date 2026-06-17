@@ -103,3 +103,13 @@ Veo las ramas, su estado y en que commit quedaron esas ramas
 git branch -r
 ```
 
+# Git Alias
+Formas resumidas de ejecutar comandos
+
+```sh
+git log --oneline # git l
+git config --global alias.l "log --oneline"
+git config --global alias.s "status --short"
+git config --global alias.c "commit -m"
+git config --global alias.a "add ."
+```
