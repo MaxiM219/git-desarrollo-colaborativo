@@ -60,3 +60,21 @@ git diff main # Estando en feature/branches
 
 * Github Desktop -> 
 * gitkraken -> 
+
+# Subir al repo remoto el repo local
+Subir a Github un repositorio local es tener una copia exacta (copia espejo) sincronizada del repo local en un remoto.
+
+> Agregar a mi repo local la ruta o dirección al
+
+```sh
+git remote add <alias> <url-al-remoto>
+git remote add origin ...
+```
+
+> Enviar los cambios al remoto
+
+```sh
+git push -u <alias-remoto> <rama-local>
+git push -u origin main # indica a git que automaticamente la proxima vez que haga push se haga a la rama main remota.
+git push # segunda y siguientes veces y automaticamente se sube la rama local main a la rama remota main
+```
