@@ -58,3 +58,30 @@ git stash -m "Mensaje descriptivo"
 
 - GitLens <eamodio.gitlens>
 - Git Graph
+
+# Git Reset
+Me permite descartar commits y enviarlos a diferentes zonas o eliminar definitivamente el commit y sus cambios
+
+## Soft
+Elimina los commits y los cambios guardados dentro de esos commits se envían al staging
+
+```sh
+git reset --soft <numero-hash>
+```
+
+## Mixed (default)
+
+Elimina los commit/s seleccionados y los cambios dentro de esos commits quedan en el working directory
+
+```sh
+git reset <numero-hash>
+git reset --mixed <numero-hash>
+```
+
+## Hard (CUIDADITO)
+
+Elimina los commit/s seleccionados y los cambios los descarta, los pierdo
+
+```sh
+git reset --hard <numero-hash>
+```
